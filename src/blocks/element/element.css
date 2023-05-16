@@ -1,0 +1,8 @@
+.element {
+  margin: 0;
+  padding: 0;
+  width: 282px;
+  height: 361px;
+  list-style-type: none;
+  position: relative;
+}

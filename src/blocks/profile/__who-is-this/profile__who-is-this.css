@@ -1,0 +1,29 @@
+.profile__who-is-this {
+  max-width: 336px;
+  margin: 6px 0 0 0;
+  padding: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1050px) {
+  .profile__who-is-this {
+    margin: 14px auto 36px auto;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  .profile__who-is-this {
+    max-width: 282px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 10px auto 0 auto;
+  }
+}

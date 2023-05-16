@@ -1,0 +1,25 @@
+.profile__name-and-button {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .profile__name-and-button {
+    margin: 0 auto;
+    padding-right: 38px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__name-and-button {
+    /* padding-right: 9px; */
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 65px;
+  }
+}
+

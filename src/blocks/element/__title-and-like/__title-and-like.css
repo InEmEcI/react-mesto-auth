@@ -1,0 +1,8 @@
+.element__title-and-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 282px;
+  background-color: #FFF;
+  border-radius: 0 0 10px 10px;
+}

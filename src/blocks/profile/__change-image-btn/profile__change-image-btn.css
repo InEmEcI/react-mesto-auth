@@ -1,0 +1,25 @@
+.profile__change-image-btn {
+  width: 120px;
+  height: 120px;
+  margin-top: 4px;
+  margin-right: 22px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.profile__change-image-btn:hover {
+  background-image: url('../../../images/karandash.svg');
+  background-size: 26px;
+  background-color: rgba(0, 0, 0, .8);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 966px) {
+  .profile__change-image-btn {
+    margin: auto;
+  }
+}

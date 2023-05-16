@@ -1,0 +1,20 @@
+.element__like {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 22px;
+  height: 19px;
+  margin-right: 20px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: url(../../../images/heart.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.element__like:hover {
+  transform: scale(1.3);
+}
+

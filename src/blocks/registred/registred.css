@@ -1,0 +1,21 @@
+.registred {
+  display: flex;
+  justify-content: center;
+  width: 358px;
+
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .registred{
+    width: 238px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

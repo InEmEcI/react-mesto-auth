@@ -1,12 +1,23 @@
 import { useContext } from "react";
 import Card from "./Card";
 import CurrentUserContext from "../contexts/CurrentUserContext";
+import Header from "./Header";
 
 function Main(props) {
   const currentUser = useContext(CurrentUserContext);
 
   return (
-    <main>
+    <>
+      <Header>
+        <p className="header__menu_item">{props.email}</p>
+        <button
+          onClick={props.onLogout}
+          className="header__menu_item header__menu_item-gray"
+        >
+          Выйти
+        </button>
+      </Header>
+
       <section className="profile">
         <button
           type="button"
@@ -51,7 +62,7 @@ function Main(props) {
           ))}
         </ul>
       </section>
-    </main>
+    </>
   );
 }
 

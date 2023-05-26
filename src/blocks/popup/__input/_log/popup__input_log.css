@@ -1,0 +1,11 @@
+.popup__input_log {
+  border-bottom: 2px solid #CCCCCC;
+  margin-bottom: 30px;  
+  margin-top: 50px;
+  background: transparent;
+  color: #CCCCCC;
+}
+
+.popup__input_log:last-child{
+  margin-bottom: 186px;
+}

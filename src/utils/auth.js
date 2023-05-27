@@ -30,12 +30,12 @@ class Auth {
     }).then((res) => this._checkError(res));
   }
 
-  checkToken(jwt) {
+  checkToken(token) {
     return fetch(this._baseUrl + "/users/me", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${jwt}`,
+        Authorization: `Bearer ${token}`,
       },
     }).then((res) => this._checkError(res));
   }

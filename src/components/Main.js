@@ -37,7 +37,7 @@ function Main(props) {
               onClick={props.onEditProfile}
               className="profile__edit"
               type="button"
-            ></button>
+            />
           </div>
           <p className="profile__who-is-this">{currentUser.about}</p>
         </div>

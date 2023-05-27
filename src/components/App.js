@@ -14,7 +14,6 @@ import auth from "../utils/auth";
 import ProtectedRoute from "./ProtectedRoute ";
 import InfoTooltip from "./InfoTooltip";
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
@@ -49,7 +48,7 @@ function App() {
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
     setSelectedCard({});
-    setMessage(null)
+    setMessage(null);
   }
 
   function handleLogOut() {
@@ -67,8 +66,8 @@ function App() {
       .then((res) => {
         if (res.token) localStorage.setItem("token", res.token);
         setIsLoginIn(true);
-        setEmail(email);          
-        navigate("/");        
+        setEmail(inputs.email);
+        navigate("/");
       })
       .catch((error) => {
         const text =
@@ -107,30 +106,30 @@ function App() {
         .checkToken(token)
         .then((res) => {
           setIsLoginIn(true);
+          setEmail(res.data.email);
           navigate("/");
-          setEmail(res.data.email);             
         })
         .catch(console.error);
     }
-  }, [navigate]);
+  }, []);
 
   useEffect(() => {
-    if (isLoginIn) {    
-    api
-      .getUser()
-      .then(setCurrentUser)
-      .catch((error) => console.log(`Ошибка: ${error}`));
+    if (isLoginIn) {
+      api
+        .getUser()
+        .then(setCurrentUser)
+        .catch((error) => console.log(`Ошибка: ${error}`));
     }
   }, [isLoginIn]);
 
   useEffect(() => {
-    if (isLoginIn) { 
-    api
-      .getCards()
-      .then((cards) => {
-        setCards(cards);
-      })
-      .catch((error) => console.log(`Ошибка: ${error}`));
+    if (isLoginIn) {
+      api
+        .getCards()
+        .then((cards) => {
+          setCards(cards);
+        })
+        .catch((error) => console.log(`Ошибка: ${error}`));
     }
   }, [isLoginIn]);
 
@@ -192,7 +191,7 @@ function App() {
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <div className="page">        
+      <div className="page">
         <Routes>
           <Route
             path="/"
@@ -226,7 +225,7 @@ function App() {
                 onLogin={handleLogin}
                 setEmail={setEmail}
               />
-            } 
+            }
           />
 
           <Route
